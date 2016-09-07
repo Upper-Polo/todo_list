@@ -4,16 +4,14 @@
 
 class ItemList:
     def __init__(self):
-        self.userlist = []
+        self.todo_items = []
 
     def add(self, item):
-        # TODO: Check inputs
-
-        self.userlist.append(item)
+        self.todo_items.append(item)
         
 
     def remove(self, item):
         # TODO: Check inputs
         
-        self.userlist.remove(item)    
+        self.todo_items.remove(item)    
 
