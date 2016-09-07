@@ -21,7 +21,7 @@ def main():
             print("Add Item")
             my_item = input("Please enter To-Do item\n")
             my_list.add(my_item)
-            print(my_list.userlist[-1])
+            print(my_list.todo_items[-1])
         
         # Remove item
         elif user_in == "2":
