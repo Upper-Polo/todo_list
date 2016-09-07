@@ -9,6 +9,7 @@ def print_menu():
     print("\n\n1. Add Item")
     print("2. Remove Item")
     print("3. List Items")
+    print("4. Mark Done")
     print("0. Exit\n\n")
 
 
@@ -38,6 +39,12 @@ def main():
         # Show items in item_list
         elif user_in == "3":
             my_list.print_all_items()
+
+        # Mark item complete.
+
+        elif user_in == "4":
+            my_list.print_all_items()
+            my_list.item_mark_complete()
 
         # Exit program
         elif user_in == "0":

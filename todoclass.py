@@ -10,9 +10,8 @@ class ToDoList:
 
     # User adds a todo item to their list.
     def add(self, user_text):
-        self.todo_items.append(user_text)
+        self.todo_items.append(user_text) # TODO: instance of item!!!
         
-
     # User removes a todo item to their list.
     def item_remove(self):
 
@@ -26,10 +25,23 @@ class ToDoList:
         # Get the value at the line item number.
         else:
             to_remove = int(to_remove)
-
             the_item = self.todo_items[to_remove - 1]
-
             self.todo_items.remove(the_item)
+
+
+    def item_mark_complete(self):
+
+        # Prompt for list item #
+        to_checkoff = input("Which Item #?")
+
+        # Check for digit.
+        if not to_checkoff.isdigit():
+            print('invalid list option')
+
+        # Get the value at the line item number.
+        else:
+            to_checkoff = int(to_checkoff)
+            self.todo_items[to_checkoff - 1] += '     (DONE)'
             
 
     def print_all_items(self):
