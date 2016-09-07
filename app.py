@@ -1,18 +1,24 @@
 # Upper-Polo To Do List App
 
 from item import Item
-from item_list import ItemList
+from todoclass import ToDoList
+
+
+def print_menu():
+    # Display menu
+    print("\n\n1. Add Item")
+    print("2. Remove Item")
+    print("3. List Items")
+    print("0. Exit\n\n")
+
 
 def main():
-    my_list = ItemList()
-    print(ItemList) # TODO: Remove this print
+    my_list = ToDoList()
+    
     while True:
-        # Display menu
-        print("1. Add Item")
-        print("2. Remove Item")
-        print("3. List Items")
-        print("0. Exit")
-        
+
+        print_menu()
+
         # Get user input
         user_in = input()
         
@@ -25,11 +31,13 @@ def main():
         
         # Remove item
         elif user_in == "2":
-            print("Remove Item")
+            my_list.print_all_items()
+            my_list.item_remove()
+
         
         # Show items in item_list
         elif user_in == "3":
-            print("Add Item")
+            my_list.print_all_items()
 
         # Exit program
         elif user_in == "0":
