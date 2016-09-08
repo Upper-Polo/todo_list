@@ -1,6 +1,6 @@
 # Upper-Polo To Do List App
 
-from item import Item
+
 from todoclass import ToDoList
 
 

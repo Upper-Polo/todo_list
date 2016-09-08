@@ -2,6 +2,9 @@
 
 import os
 
+# Our Item module
+from item import Item
+
 # An Item object for each user entry to their todo list.
 
 class ToDoList:
@@ -10,7 +13,9 @@ class ToDoList:
 
     # User adds a todo item to their list.
     def add(self, user_text):
-        self.todo_items.append(user_text) # TODO: instance of item!!!
+
+        new_user_item = Item(user_text) 
+        self.todo_items.append(new_user_item)
         
     # User removes a todo item to their list.
     def item_remove(self):
@@ -28,7 +33,7 @@ class ToDoList:
             the_item = self.todo_items[to_remove - 1]
             self.todo_items.remove(the_item)
 
-
+    # User adds 'DONE' to end of their item.
     def item_mark_complete(self):
 
         # Prompt for list item #

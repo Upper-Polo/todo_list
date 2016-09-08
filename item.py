@@ -6,8 +6,9 @@
 class Item:
 	def __init__(self, title):
 		self.title = title
-		# self.date = 
-		self.done = done
+		self.text = ''
+		self.done = False
+		# self.date =
 
 
     
