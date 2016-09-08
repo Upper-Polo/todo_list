@@ -18,6 +18,8 @@ def main():
     
     while True:
 
+        # Print todo list and menu on each iteration.
+        my_list.print_todo_list()
         print_menu()
 
         # Get user input
@@ -28,22 +30,22 @@ def main():
             print("Add Item")
             my_item = input("Please enter To-Do item\n")
             my_list.add(my_item)
-            print(my_list.todo_items[-1])
+            
         
         # Remove item
         elif user_in == "2":
-            my_list.print_all_items()
+            my_list.print_todo_list()
             my_list.item_remove()
 
         
         # Show items in item_list
         elif user_in == "3":
-            my_list.print_all_items()
+            my_list.print_todo_list()
 
         # Mark item complete.
 
         elif user_in == "4":
-            my_list.print_all_items()
+            my_list.print_todo_list()
             my_list.item_mark_complete()
 
         # Exit program

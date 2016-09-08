@@ -46,16 +46,20 @@ class ToDoList:
         # Get the value at the line item number.
         else:
             to_checkoff = int(to_checkoff)
-            self.todo_items[to_checkoff - 1] += '     (DONE)'
+            self.todo_items[to_checkoff - 1].done = True
+            self.print_todo_list()
             
 
-    def print_all_items(self):
+    def print_todo_list(self):
         os.system("clear")
         print('To Do')
 
         i = 0
         while i < len(self.todo_items):
-            print('{} {}'.format(i + 1, self.todo_items[i]))
+            each_item = self.todo_items[i]
+
+            # Print the item number and title value.
+            print('{} {}'.format(i + 1, each_item.print_item()))
             i = i + 1
 
 
