@@ -1,4 +1,7 @@
-# Upper-Polo To Do List App
+# todoclass.py - Upper-Polo To Do List App
+
+# This module defines the ToDoList class that represents
+# the core storage and functionality of a todo list.
 
 import os
 
@@ -61,8 +64,3 @@ class ToDoList:
             # Print the item number and title value.
             print('{} {}'.format(i + 1, each_item.print_item()))
             i = i + 1
-
-
-
-
-
