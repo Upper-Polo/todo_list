@@ -14,6 +14,6 @@ class Item:
 
     def print_item(self):
         if self.done:
-            return '{}  (DONE)   {}'.format(self.title, self.timestamp)
+            return '{} (DONE) {}'.format(self.title, self.timestamp)
         else:
             return '{}'.format(self.title)
